@@ -1,0 +1,71 @@
+# To implement a for loop:
+for file in *;
+do 
+    echo $file found;
+done
+
+# To implement a case command:
+case "$1"
+in
+    0) echo "zero found";;
+    1) echo "one found";;
+    2) echo "two found";;
+    3*) echo "something beginning with 3 found";;
+esac
+
+# To redirecting stdout & stderr to stdin
+cmd1  |&  cmd2
+
+# To redirecting stderr to stdin
+cmd1  2>  >(cmd2)
+
+# cmd1 takes a file as an argument, stdout of cmd2 is stored in tmp file
+cmd1 <(cmd2)
+
+# To Redirecting stderr to stdout
+(>&2 echo "this is an error message" )
+
+# To replace first occurrence of 'from' in $var by 'to'
+${var/from/to} 
+
+# To replace all occurrences of 'from' in $var by 'to'
+${var//from/to}
+
+# To replace 'from' at start of $var by 'to'
+${var/#from/to}
+
+# To replace 'from' at end of $var by 'to'
+${var/%from/to}
+
+# To rsync copy from remote to local
+rsync -avz remote_host:remote_dir/ local_dir/
+
+# To get a sequences of numbers
+for i in {01...5}: do ...; done # -> 01, 02, ..., 05
+
+# To expand strings
+name_{a,b,c}  # -> name_a name_b name_c
+name_{01..20} # -> name_01 name_02 ... name_20
+
+# To capture and show stdout:
+<cmd> | tee <file>
+
+# To capture and show both stdout & stderr in correct order
+(<cmd> 2>&1) | tee <file>
+
+# To read from a file line by line and do something to a complete line:
+while read line; do <do-something> "$line"; done < <file>
+
+# To turn on debugging:
+set -x
+
+# To turn off debugging:
+set +x
+
+# Retrieve N-th piped command exit status:
+printf 'foo' | fgrep 'foo' | sed 's/foo/bar/'
+echo ${PIPESTATUS[0]}  # replace 0 with N
+
+# To create a lockfile:
+( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
+
