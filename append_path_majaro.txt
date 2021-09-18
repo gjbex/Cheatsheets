@@ -1,0 +1,12 @@
+Insert function definition into /etc/profile.d/perlbin.sh and unset after use.
+
+# Append "$1" to $PATH when not already in.
+# This function API is accessible to scripts in /etc/profile.d
+append_path () {
+    case ":$PATH:" in
+        *:"$1":*)
+            ;;
+        *)
+            PATH="${PATH:+$PATH:}$1"
+    esac
+}
