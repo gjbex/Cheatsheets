@@ -40,3 +40,9 @@ To create an environment form a `.yml` file, use
 ```bash
 $ conda env create -f environment.yml
 ```
+
+To create an environment for a specification file, use
+
+```bash
+$ conda create -n <name> --file spec_file.txt
+```
