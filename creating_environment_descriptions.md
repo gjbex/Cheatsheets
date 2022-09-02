@@ -31,7 +31,8 @@ dependencies, no versions.
 $ conda env export --from-history > environment.yml
 ````
 
-Best to ensure portability.
+Best to ensure portability.  However, note that packages installed
+using `pip` are **not** included.
 
 ## Recreating the environment
 
