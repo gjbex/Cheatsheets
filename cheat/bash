@@ -34,8 +34,14 @@ ${var//from/to}
 # To replace 'from' at start of $var by 'to'
 ${var/#from/to}
 
+# To remove a prefix
+${var#prefix}
+
 # To replace 'from' at end of $var by 'to'
 ${var/%from/to}
+
+# To remove a suffix
+${var%suffix}
 
 # To rsync copy from remote to local
 rsync -avz remote_host:remote_dir/ local_dir/
