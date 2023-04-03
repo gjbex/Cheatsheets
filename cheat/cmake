@@ -11,3 +11,22 @@ cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
 - Debug
 - RelWithDebInfo
 - Debug
+
+# CMakeLists.txt settings
+## set the minimal CMake verion
+cmake_minimum_required(VERSION 3.0)
+
+## set the project
+project(DiffustionLimitedAggregation LANGUAGES CXX)
+
+## set the lange version for a compiler
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STATNDARD_REQUIRED YES)
+set(CMAKE_CXX_EXTNEIONS NO)
+
+## set additional compiler options
+add_compile_options(-Wall -Wextra -Wpedantic)
+
+## add an executable target
+add_executable(simulation.exe
+    main.cpp medium.cpp)
