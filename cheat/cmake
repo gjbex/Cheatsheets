@@ -1,0 +1,13 @@
+# configure build
+cmake -B build/ -S .
+
+# build
+cmake --build build/
+
+# build types
+cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
+
+# possible build types
+- Debug
+- RelWithDebInfo
+- Debug
