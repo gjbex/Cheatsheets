@@ -1,0 +1,9 @@
+# reload modules imported by a notebook when they change
+%load_ext autoreload
+%autoreload 1
+
+# run a notebook as a script, this will send JSON to stdout
+jupyter run <notebook.ipynb>
+
+# install a virtual environment as a kernel (requires ipykernel to be installed)
+ipython kernel install --user --name=<env_name>
