@@ -7,6 +7,9 @@ cmake --build build/
 # build types
 cmake -B build -S . -DCMAKE_BUILD_TYPE=Release
 
+# clean the build
+cmake --build build/ --target clean
+
 # possible build types
 - Debug
 - RelWithDebInfo
@@ -30,3 +33,6 @@ add_compile_options(-Wall -Wextra -Wpedantic)
 ## add an executable target
 add_executable(simulation.exe
     main.cpp medium.cpp)
+
+## add a library to link in
+target_link_libraries(simulation.exe fmt::fmt)
