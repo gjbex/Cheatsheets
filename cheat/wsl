@@ -1,0 +1,2 @@
+# synchronize the WSL clock with the hardware clock (Ubuntu 22.04)
+sudo hwclock -s
