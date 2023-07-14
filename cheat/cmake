@@ -13,7 +13,7 @@ cmake --build build/ --target clean
 # possible build types
 - Debug
 - RelWithDebInfo
-- Debug
+- Release
 
 # CMakeLists.txt settings
 ## set the minimal CMake verion
