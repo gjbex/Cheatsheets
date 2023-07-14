@@ -1,0 +1,5 @@
+# compile with support for OpenMP
+nvc++  -mp=gpu  <source-file>
+
+# compile targetting a specific generation of GPU
+nvc++  --gpu=cc<nn>  <source-file>
