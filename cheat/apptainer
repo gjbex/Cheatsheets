@@ -1,0 +1,20 @@
+# to build an image
+sudo apptainer  build <image-file>  <recipe-file>
+
+# to build an image with fake root
+apptainer  --fake-root  <image-file>  <recipe-file>
+
+# to run a container
+apptainer  run <image-file>
+
+# to run a specific command in the container, e.g., a shell
+apptainer exec <image-file>  /bin/bash
+
+# to bind a directory
+apptainer exec -B<host-dir>:<container-dir>  <image-file>  /bin/bash
+
+# to bind a directory with the same path on host and container
+apptainer exec -B<host-dir>  <image-file>  /bin/bash
+
+# to interact with a GPU
+apptainer exec  --nv  <image-file>  /bin/bash
