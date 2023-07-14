@@ -1,0 +1,15 @@
+# vim-commentary
+gc comments/uncomments selection
+
+# vim-surround
+'hello world' -> "hello world": cs'"
+`var_name` -> <code>var_name</code>: cs`<code>
+'hello world' -> hello world: ds'
+hello world -> [hello] world: ysiw]
+hello world -> [ hello ] world: ysiw[
+
+# vim-targets
+(some text) -> (_): ci(
+(some text) -> _: ca(
+'some text' -> '_': ci'
+'hello, world, bye' -> 'hello, bye': da,
