@@ -1,2 +1,5 @@
 # synchronize the WSL clock with the hardware clock (Ubuntu 22.04)
 sudo hwclock -s
+
+# copy the contents of a file to the clipboard (shared with Windows 11)
+xclip -selection clipboard < README.md
