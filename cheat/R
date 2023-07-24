@@ -1,0 +1,12 @@
+# enviornment variable to control user library path
+R_LIBS_USER
+
+# environment variable that will avoid trouble with certain R packages that
+# try to get the system time in awkward ways
+TZ="Europe/Brussels"
+
+# file that defines R environment variables, add name=value, one per line
+.Renviorn
+
+# file that is source as R code when the interpreter starts
+.Rprofile
