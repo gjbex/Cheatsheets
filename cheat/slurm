@@ -8,14 +8,11 @@ squeue [ --user=<user> ] --cluster=<cluster>
 scancel <job-id>
 scancel --name <job-name>
 
-# To list all information for a job:
-scontrol show jobid -dd <job-id>
-
 # To list all job attributes
-sacct -e
+sacct --helpformat
 
 # To status info for currently running job:
-sstat --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize -j <job-id> --allsteps
+sstat --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize -job=<job-id> --allsteps
 
 # Get information on a job that completed
 sacct --cluster=<cluster> --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize --jobs=<job-id>
