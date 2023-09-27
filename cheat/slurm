@@ -16,3 +16,6 @@ sstat --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize -job=<job-id> --allsteps
 
 # Get information on a job that completed
 sacct --cluster=<cluster> --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize --jobs=<job-id>
+
+# Request a particular node feature, e.g., cascadelake
+sbatch --constraint=<feature>  <job-file>
