@@ -23,3 +23,6 @@ sacct --cluster=<cluster> --starttime=<YYYY-mm-dd[-HH:MM:SS]> --user=<user>
 # Get information of all clusters
 sacct --allclusters ...
 squeue --clusters=all ...
+
+# Request a particular node feature, e.g., cascadelake
+sbatch --constraint=<feature>  <job-file>
