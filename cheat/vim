@@ -1,2 +1,3 @@
 # editing a remote file
-nvim scp://<user>@<host>/<path>/<file>
+nvim scp://<user>@<host>/<rel-path>/<file>
+nvim scp://<user>@<host>//<abs-path>/<file>
