@@ -11,11 +11,18 @@ scancel --name <job-name>
 # To list all job attributes
 sacct --helpformat
 
-# To status info for currently running job:
+# To get status info for currently running job:
 sstat --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize -job=<job-id> --allsteps
 
 # Get information on a job that completed
 sacct --cluster=<cluster> --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize --jobs=<job-id>
+
+# Get a list of completed jobs
+sacct --cluster=<cluster> --starttime=<YYYY-mm-dd[-HH:MM:SS]> --user=<user>
+
+# Get information of all clusters
+sacct --allclusters ...
+squeue --clusters=all ...
 
 # Request a particular node feature, e.g., cascadelake
 sbatch --constraint=<feature>  <job-file>
