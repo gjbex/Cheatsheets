@@ -1,2 +1,5 @@
 # editing a remote file
 nvim scp://<user>@<host>/<path>/<file>
+
+# safe a root-owned file (become root inside vim
+:w !sudo tee %
