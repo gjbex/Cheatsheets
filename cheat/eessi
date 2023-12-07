@@ -1,0 +1,9 @@
+# clone a EESSI repository
+git clone https://github.com/EESSI/eessi-demo.git
+
+# install cvmfs and configure for EESSI servers
+sudo eessi-demo/scripts/install_cvmfs_eessi.sh 
+
+# configure for EESSI
+source /cvmfs/pilot.eessi-hpc.org/versions/2021.12/init/bash
+# note that you can not switch to a different release except in a new shell
