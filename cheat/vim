@@ -4,3 +4,8 @@ nvim scp://<user>@<host>//<abs-path>/<file>
 
 # safe a root-owned file (become root inside vim
 :w !sudo tee %
+
+# wrap a text file to, e.g., 80 characters
+:set tw=80
+ctrl-v + movement to select text
+gq
