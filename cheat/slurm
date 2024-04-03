@@ -26,3 +26,6 @@ squeue --clusters=all ...
 
 # Request a particular node feature, e.g., cascadelake
 sbatch --constraint=<feature>  <job-file>
+
+# Start an interactive job
+srun --pty /bin/bash
