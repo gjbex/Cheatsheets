@@ -44,3 +44,9 @@ conda env export > <environment.yml>
 
 # To export an activated environment, listing only manually installed packages (no dependencies)
 conda env export --from-history > <environment.yml>
+
+# To wrap a shell script around a tool installed in a conda environment
+#!/usr/bin/env bash
+source /home/gjb/.mamba_init.sh
+mamba activate conan
+$(dirname $(which python))/conan "$@"
