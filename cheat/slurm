@@ -29,3 +29,6 @@ sbatch --constraint=<feature>  <job-file>
 
 # Start an interactive job
 srun --pty /bin/bash
+
+# Connect to a node on which your job is running
+srun  --jobid=<jobid>  --pty  /bin/bash
