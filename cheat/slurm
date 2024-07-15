@@ -17,6 +17,9 @@ sstat --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize -job=<job-id> --allsteps
 # Get information on a job that completed
 sacct --cluster=<cluster> --format=JobID,AveCPU,AvePages,AveRSS,AveVMSize --jobs=<job-id>
 
+# Estimate the parallel efficiency
+sacct --cluster=<cluster> --format=JobID,CPUTime,TotalCPU --jobs=<job-id>
+
 # Get a list of completed jobs
 sacct --cluster=<cluster> --starttime=<YYYY-mm-dd[-HH:MM:SS]> --user=<user>
 
