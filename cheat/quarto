@@ -1,0 +1,39 @@
+# create a quarto project
+$ quarto create project
+
+# output directory, set in _quarto.yml
+project:
+  title: "Workflows for HPC lunchbox session"
+  output-dir: lunchbox_slides
+
+# render the project
+$ quarto render
+
+# document header for slides in top-level .qmd file
+---
+title: "Workflows for HPC lunchbox session"
+author: "Ehsan Moravveji, Jan Ooghe, Geert Jan Bex"
+institute: Vlaams Supercomputer Centrum
+date: today
+format: 
+  revealjs:
+    incremental: true
+    slide-number: true
+---
+
+# include files
+{{< include file.qmd >}}
+
+# section slide: level-1 header
+# slide: level-2 header
+
+# pandoc fenced divs
+::: {some_class}
+...
+:::
+
+# pandoc bracket spans
+Some text with [a span]{some_class}
+
+# footnote
+This is text^[a footnote goes here] that is interesting
