@@ -1,6 +1,9 @@
 # To submit a new job:
 sbatch <job-file>
 
+# Email notification
+sbatch  --mail-user=<email>  --mail-type=END,FAIL ...
+
 # To list all jobs for a user:
 squeue [ --user=<user> ] --cluster=<cluster>
 
@@ -35,3 +38,8 @@ srun --pty /bin/bash -l
 
 # Connect to a node on which your job is running
 srun  --jobid=<jobid>  --pty  /bin/bash
+
+# Pass variable to job, note, you will like to add ALL
+sbatch  --export=VAR1=val1,VAR2=val2 ...
+sbatch  --export=VAR1=val1,VAR2=val2,ALL ...
+
