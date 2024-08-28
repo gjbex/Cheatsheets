@@ -50,3 +50,6 @@ conda env export --from-history > <environment.yml>
 source /home/gjb/.mamba_init.sh
 mamba activate conan
 $(dirname $(which python))/conan "$@"
+
+# Clear caches
+conda clear --all
