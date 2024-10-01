@@ -62,6 +62,9 @@ name_{01..20} # -> name_01 name_02 ... name_20
 # To read from a file line by line and do something to a complete line:
 while read line; do <do-something> "$line"; done < <file>
 
+# To make a script fail on first error
+set -e
+
 # To turn on debugging:
 set -x
 
@@ -75,3 +78,9 @@ echo ${PIPESTATUS[0]}  # replace 0 with N
 # To create a lockfile:
 ( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
 
+# To check whether a variable is defined and set
+if [ -n "$variable" ]; then
+    echo "Variable is defined and set to a non-empty string"
+else
+    echo "Variable is not defined or set to an empty string"
+fi
