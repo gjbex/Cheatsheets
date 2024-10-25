@@ -52,5 +52,8 @@ sshfs <user>@<host>:/path/to/folder /path/to/mount/point
 # Doc: http://www.gnu.org/software/emacs/manual/html_node/emacs/Remote-Files.html
 emacs /ssh:<user>@<host>:<file>
 
-# To force login to a specific login node, use
+# To force login to a specific login node (VSC KU Leuven specific)
 ssh -A genius -l vsc30140@tier2-p-login-2
+
+# To connect without multiplexing persistent connections
+ssh -o 'ControlMaster=no' <host>
