@@ -84,3 +84,6 @@ if [ -n "$variable" ]; then
 else
     echo "Variable is not defined or set to an empty string"
 fi
+
+# Get the OS version
+cat /etc/os-release
