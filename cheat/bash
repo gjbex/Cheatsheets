@@ -87,3 +87,6 @@ fi
 
 # Get the OS version
 cat /etc/os-release
+
+# Get the kernel version
+uname -r
