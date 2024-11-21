@@ -10,3 +10,6 @@ TZ="Europe/Brussels"
 
 # file that is source as R code when the interpreter starts
 .Rprofile
+
+# to get R to print stack traces to 3 levels deep
+options(error = function() traceback(3))
