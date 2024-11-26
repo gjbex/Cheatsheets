@@ -90,3 +90,9 @@ cat /etc/os-release
 
 # Get the kernel version
 uname -r
+
+# Open an editor & execute command
+# emacs keybindings
+ctrl-x ctrl-e
+# vi keybindings
+esc v
