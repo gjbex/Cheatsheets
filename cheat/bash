@@ -65,11 +65,14 @@ while read line; do <do-something> "$line"; done < <file>
 # To make a script fail on first error
 set -e
 
-# To turn on debugging:
+# To turn on debugging (print command before execution):
 set -x
 
 # To turn off debugging:
 set +x
+
+# Detect errors in pipes
+set -o pipefail
 
 # Retrieve N-th piped command exit status:
 printf 'foo' | fgrep 'foo' | sed 's/foo/bar/'
@@ -96,3 +99,12 @@ uname -r
 ctrl-x ctrl-e
 # vi keybindings
 esc v
+
+# Handle command line options:
+while getopts ":u:p:" opt; do
+    case $opt in
+        u) user="$OPTARG" ;;
+        p) password="$OPTARG" ;;
+        \?) echo "Invalid option: -$OPTARG" >&2 ;;
+    esac
+done
