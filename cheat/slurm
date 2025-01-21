@@ -43,3 +43,11 @@ srun  --jobid=<jobid>  --pty  /bin/bash
 sbatch  --export=VAR1=val1,VAR2=val2 ...
 sbatch  --export=VAR1=val1,VAR2=val2,ALL ...
 
+# Get information on partition parameters
+scontrol show partition=batch_icelake --cluster=wice
+
+# Get Slurm general configuration parameters
+scontrol show config
+
+# Get information on QoS defintion parameters, e.g., max jobs per user, walltime
+sacctmgr show qos <name>

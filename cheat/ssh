@@ -57,3 +57,9 @@ ssh -A genius -l vsc30140@tier2-p-login-2
 
 # To connect without multiplexing persistent connections
 ssh -o 'ControlMaster=no' <host>
+
+# To tunnel to a compute node, log in (land on, e.g., login2), start an interactive job
+# (e.g., s28c11n2), launch proces that listens to port 30140
+# Connect client to localhost:30140 (for, e.g., Jupyter, don't forget token)
+ssh vsc30140@login.hpc.kuleuven.be
+ssh -J vsc30140@login2-tier2.hpc.kuleuven.be -L 30140:localhost:30140 vsc30140@s28c11n2
