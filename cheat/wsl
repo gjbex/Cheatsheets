@@ -3,3 +3,7 @@ sudo hwclock -s
 
 # copy the contents of a file to the clipboard (shared with Windows 11)
 xclip -selection clipboard < README.md
+
+# to view the WSL file system in Windows Exaplorer, enter `\\wsl$` in the
+# address bar, or from WSL type
+explorer.exe .
