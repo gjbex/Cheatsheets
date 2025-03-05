@@ -7,3 +7,6 @@ jupyter run <notebook.ipynb>
 
 # install a virtual environment as a kernel (requires ipykernel to be installed)
 ipython kernel install --user --name=<env_name>
+
+# install a lab extension, e.g., for ipywidgets
+jupyter labextension enable widgetsnbextension
