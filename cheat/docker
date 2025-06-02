@@ -1,6 +1,14 @@
 # To start the docker daemon:
 docker -d
 
+# Start/stop docker as a service (Ubuntu)
+sudo service docker start
+sudo service docker stop
+
+# Start/stop docker with systemctl
+sudo systemctl start docker
+sudo systemctl stop docker
+
 # To start a container with an interactive shell:
 docker run -ti <image-name> /bin/bash
 
@@ -37,5 +45,13 @@ docker rmi $(docker images | grep "^<none>" | awk '{print $3}')
 # To remove all volumes not used by at least one container:
 docker volume prune
 
+# To remove stopped containers, unused volumes and clear the cache
+docker system prune
+
 # To map UID/GID on run
-$ docker run --rm -it --user $(id -u):$(id -g) ubuntu-24-04 /bin/bash
+docker run --rm -it --user $(id -u):$(id -g) ubuntu-24-04 /bin/bash
+
+# To build an image with tag <tag> from a <docker-file>, use the following command:
+# <ocntext> refers to the directory relative to which the image is built,
+# e.g., the current working directory .
+docker build -t <tag> -f <docker-file> <context>
