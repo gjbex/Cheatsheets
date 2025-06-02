@@ -108,3 +108,22 @@ while getopts ":u:p:" opt; do
         \?) echo "Invalid option: -$OPTARG" >&2 ;;
     esac
 done
+
+# Parameter expansion
+# string='/abc/def/ghi.jkl'
+# Remove prefix
+${string#/} # -> abc/def/ghi.jkl
+${string#/abc} # -> /def/ghi.jkl
+# Remove longest prefix
+${string##*/} # -> ghi.jkl
+# Remove suffix
+${string%.*} # -> /abc/def/ghi
+${string%/*} # -> /abc/def
+# Remove longest suffix
+${string%%/*} # ->
+# String substitution
+${string//abc/ABC} # -> /ABC/def/ghi.jkl
+# Default value
+string2=${string:-default.jkl} # -> default.jkl
+# Error if not defined
+string2=${bar:?Not defined} # -> writes -bash: bar: Not defined, exit status 1
