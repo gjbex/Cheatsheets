@@ -18,3 +18,12 @@ apptainer exec -B<host-dir>  <image-file>  /bin/bash
 
 # to interact with a GPU
 apptainer exec  --nv  <image-file>  /bin/bash
+
+# Environment variables to define cache and tmp directory
+$ export APPTAINER_TMPDIR=$VSC_SCRATCH/apptainer_tmp
+$ mkdir -p $APPTAINER_TMPDIR
+$ export APPTAINER_CACHEDIR=$VSC_SCRATCH/apptainer_cache
+$ mkdir -p $APPTAINER_CACHEDIR
+
+# Clean Apptainer caches
+$ apptainer cache clean
