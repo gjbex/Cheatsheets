@@ -1,0 +1,5 @@
+# install cargo-update application
+$ cargo install cargo-update
+
+# update applications installed using cargo
+$ cargo install-update -a
