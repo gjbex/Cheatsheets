@@ -1,0 +1,8 @@
+# permit using hardware counters
+$ echo -1 | sudo tee /proc/sys/kernel/perf_event_paranoid
+
+# prohibit using hardware counters
+$ echo 2 | sudo tee /proc/sys/kernel/perf_event_paranoid
+
+# location of specific perf for WSL2
+/usr/lib/linux-tools-5.15.0-142/perf
