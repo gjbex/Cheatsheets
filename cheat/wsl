@@ -1,9 +1,15 @@
 # synchronize the WSL clock with the hardware clock (Ubuntu 22.04)
-sudo hwclock -s
+$ sudo hwclock -s
 
 # copy the contents of a file to the clipboard (shared with Windows 11)
-xclip -selection clipboard < README.md
+$ xclip -selection clipboard < README.md
 
 # to view the WSL file system in Windows Exaplorer, enter `\\wsl$` in the
 # address bar, or from WSL type
-explorer.exe .
+$ explorer.exe .
+
+# list all instances currently running
+> wsl --list --verbose
+
+# terminate a specific instance, e.g., NixOS
+> wsl --terminate NixOS
