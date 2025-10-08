@@ -8,3 +8,7 @@ sudo ./create-project-storage \
     -pi_lname "De Laet" \
     -quota_stg 20t i\
     -quota_arc 0t
+
+# access documentation
+ssh -D 1080 genius
+chrome.exe --proxy-server="socks5://127.0.0.1:1080"
