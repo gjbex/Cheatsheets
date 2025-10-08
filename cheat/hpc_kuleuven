@@ -1,0 +1,10 @@
+# create new staging directory
+sudo ./create-project-storage \
+    -ticket_id 0123456789 \
+    -subscriber vsc33268 \
+    -project_id l_sysadmin \
+    -email jan.delaet@kuleuven.be,lennon@heavens.com,jsb@harpsichord.de \
+    -pi_fname "Jan Engelbert" \
+    -pi_lname "De Laet" \
+    -quota_stg 20t i\
+    -quota_arc 0t
