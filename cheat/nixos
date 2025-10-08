@@ -1,0 +1,11 @@
+# to list all generations of NixOS
+$ sudo nix-env  -p /nix/var/nix/profiles/system  --list-generations
+
+# to remove all old generations
+$ sudo nix-remove-garbage -d
+
+# to delete generations older than, e.g., 30d
+$ sudo nix-remove-garbage  --delete-older-than 30d
+
+# rebuild configuration (may require reboot to take effect)
+$ sudo nixos-rebuild switch
