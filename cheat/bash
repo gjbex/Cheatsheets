@@ -127,3 +127,6 @@ ${string//abc/ABC} # -> /ABC/def/ghi.jkl
 string2=${string:-default.jkl} # -> default.jkl
 # Error if not defined
 string2=${bar:?Not defined} # -> writes -bash: bar: Not defined, exit status 1
+
+# Run a command with an environment variable unset
+env -u PYTHONPATH my_pipx_application ...
