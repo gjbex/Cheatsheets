@@ -55,8 +55,8 @@ sacctmgr show qos <name>
 # Create a reservation for a course
 sudo scontrol -M wice create \
     reservationname=course_pds_inf_02 \
-	start=2025-10-31T09:00:00 \
+    start=2025-10-31T09:00:00 \
     duration=00-04:00:00 \
-	partition=gpu_a100 \
-	nodecount=1 corecount=72 \
+    partition=gpu_a100 \
+    nodecount=1 corecount=72 \
     group=llp_h_pds
