@@ -12,3 +12,13 @@ sudo ./create-project-storage \
 # access documentation
 ssh -D 1080 genius
 chrome.exe --proxy-server="socks5://127.0.0.1:1080"
+
+# Ivanti ticket info
+# Service: Ondersteuning voor onderzoek
+# Categorie: HPC Tier-2
+
+# queue status
+slurm_queuestate
+
+# job metrics
+slurm_jobinfo  --cluster <cluster>  <job_id>
