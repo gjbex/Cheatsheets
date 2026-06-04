@@ -22,3 +22,6 @@ slurm_queuestate
 
 # job metrics
 slurm_jobinfo  --cluster <cluster>  <job_id>
+
+# get a certificate
+ssh -A vsc30140@firewall.vscentrum.be
